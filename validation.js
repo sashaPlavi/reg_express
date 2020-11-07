@@ -6,13 +6,17 @@ const patterns ={
 
 
 function validate(field, regex){
-  regex.test(field.value);
+if(  regex.test(field.value) ){
+  field.className='valid';
+}else{
+  field.className='invalid';
+};
 }
 
 
 inputs.forEach((item) =>{
   item.addEventListener('keyup', (e)=>{
     //console.log(e.target.attributes.name.value);
-    validate(e.target, patterns['telephone'])
+    validate(e.target, patterns[e.target.attributes.name.value])
   })
 })
