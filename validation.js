@@ -4,7 +4,8 @@ const patterns ={
   telephone:/^[0-9]{11}$/,
   username:/^[a-z\d]{5,12}$/i,
   password:/^[\w@-]{8,12}$/,
-  slug:/^[a-z0-9-]{8,20}$/
+  slug:/^[a-z0-9-]{8,20}$/,
+  email:/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
 }
 
 
